@@ -1,6 +1,7 @@
 package com.milovanjakovljevic.compose
 
 import android.os.Bundle
+import android.provider.Settings.Secure.getString
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -11,8 +12,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    BirthdayGreetingWithImage(message = getString(R.string.happy_leatning_text), from = "-from Milovan")
+                    Article(message = getString(R.string.headline), paragraph =  getString(R.string.paragraph1), paragraph2 =  getString(R.string.paragraph2))
                 }
             }
         }
@@ -36,36 +37,53 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BirthdayGreetingWithImage(message: String,from: String){
-    val image = painterResource(id=R.drawable.androidparty)
-   Box{
-       Image(painter = image, contentDescription =null,modifier=Modifier.fillMaxHeight().fillMaxWidth(), contentScale = ContentScale.Crop )
-       BirthdayGreetingWithText(message = message, from =from)
+fun Article(message: String, paragraph:String, paragraph2: String){
+    val image = painterResource(id=R.drawable.bg_compose_background)
+   Column{
+       Image(painter = image, contentDescription =null,modifier=Modifier.fillMaxWidth() )
+       HeadlineText(text=message)
+       ParagraphText(paragraph = paragraph)
+       ParagraphText2(paragraph = paragraph2)
    }
 }
 
 @Composable
-fun BirthdayGreetingWithText(message:String,from:String){
+fun HeadlineText(text: String){
+
     Column() {
         Text(
-            text=message,
-            fontSize = 36.sp,
-            modifier = Modifier.
-            fillMaxWidth()
-                .wrapContentWidth(align=Alignment.Start)
-                .padding(start = 16.dp, top = 16.dp))
-        Text(
-            text= from,
+            text=text,
             fontSize = 24.sp,
-            modifier = Modifier.
-        fillMaxWidth().wrapContentWidth(align = Alignment.End).padding(end=16.dp, start = 16.dp))
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentWidth(align = Alignment.Start)
+                .padding(all = 16.dp))
+            }
+}
+@Composable
+fun ParagraphText(paragraph: String){
+    Column() {
+        Text(
+            text=paragraph,
+            fontSize =16.sp,
+            textAlign=TextAlign.Justify,
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentWidth(align = Alignment.Start)
+                .padding(start = 16.dp, end = 16.dp))
+    }
+}
+@Composable
+fun ParagraphText2(paragraph: String){
+    Column() {
+        Text(
+            text=paragraph,
+            fontSize =16.sp,
+            textAlign=TextAlign.Justify,
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentWidth(align = Alignment.Start)
+                .padding(all=16.dp))
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun BirthdayGreetingWithImagePreview() {
-    ComposeTheme {
-        BirthdayGreetingWithImage(message = "Milovan",from="-form Ao")
-    }
-}
