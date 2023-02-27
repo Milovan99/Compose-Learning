@@ -13,6 +13,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -29,12 +31,45 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Article(message = getString(R.string.headline), paragraph =  getString(R.string.paragraph1), paragraph2 =  getString(R.string.paragraph2))
+                  //  Article(message = getString(R.string.headline), paragraph =  getString(R.string.paragraph1), paragraph2 =  getString(R.string.paragraph2))
+                    TaskManager()
                 }
             }
         }
     }
 }
+
+@Composable
+fun TaskManager(){
+    val image = painterResource(id =  R.drawable.ic_task_completed)
+    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+
+        Image(painter = image, contentDescription = null , modifier = Modifier
+            .wrapContentWidth(align = Alignment.CenterHorizontally).wrapContentHeight(align = Alignment.CenterVertically))
+        Text(
+            text = "All tasks completed",
+            textAlign=TextAlign.Center,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top=24.dp, bottom = 8.dp)
+        )
+        Text(
+            text = "Nice work!",
+            textAlign=TextAlign.Center,
+            fontSize = 16.sp,
+        )
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @Composable
 fun Article(message: String, paragraph:String, paragraph2: String){
@@ -83,7 +118,7 @@ fun ParagraphText2(paragraph: String){
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentWidth(align = Alignment.Start)
-                .padding(all=16.dp))
+                .padding(all = 16.dp))
     }
 }
 
