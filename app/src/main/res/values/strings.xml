@@ -18,4 +18,10 @@
     
     
     <string name="roll">Roll</string>
+    
+    
+    <string name="lemonTree">Tap the lemon tree to select a lemon</string>
+    <string name="lemon">Keep tapping the lemon to squeeze it</string>
+    <string name="glassOfLemonade">Tap the lemonade to drink it</string>
+    <string name="emptyGlass">Tap the empty glass to start again</string>
 </resources>

@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.milovanjakovljevic.compose.composebasic.BusinessCard
 import com.milovanjakovljevic.compose.dice_roller.DiceRollerApp
 import com.milovanjakovljevic.compose.dice_roller.DiceWithAnimationAndButton
+import com.milovanjakovljevic.compose.lemonade.LemonadeApp
 import com.milovanjakovljevic.compose.ui.theme.ComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
                   // ComposeQuadrantApp()
                   //  BusinessCard()
 
-                DiceRollerApp()
+                //DiceRollerApp()
+                LemonadeApp()
                 }
             }
         }
