@@ -1,15 +1,20 @@
 package com.milovanjakovljevic.compose.lemonade
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.milovanjakovljevic.compose.R
 
 
@@ -51,10 +56,10 @@ fun LemonadeWithAnimation(modifier: Modifier=Modifier){
     Column(
         modifier=modifier,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = stringResource(id = textResource))
+        Text(text = stringResource(id = textResource), fontSize = 18.sp)
         Spacer(modifier = Modifier.height(16.dp))
         Image(
-            modifier=Modifier.clickable {
+            modifier=Modifier.border(border = BorderStroke(2.dp, Color(105,205,216,255)), shape = RoundedCornerShape(4.dp)).clickable {
                 if(step<4 && step!=2){
                       step++
                 }else if(step == 2){
