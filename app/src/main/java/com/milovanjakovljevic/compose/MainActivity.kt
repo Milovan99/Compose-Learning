@@ -12,8 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.milovanjakovljevic.compose.composebasic.BusinessCard
 import com.milovanjakovljevic.compose.dice_roller.DiceRollerApp
+
 import com.milovanjakovljevic.compose.dice_roller.DiceWithAnimationAndButton
 import com.milovanjakovljevic.compose.lemonade.LemonadeApp
+import com.milovanjakovljevic.compose.tip_time.TipTimeScreen
 import com.milovanjakovljevic.compose.ui.theme.ComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,7 +35,8 @@ class MainActivity : ComponentActivity() {
                   //  BusinessCard()
 
                 //DiceRollerApp()
-                LemonadeApp()
+                //LemonadeApp()
+                TipTimeScreen()
                 }
             }
         }

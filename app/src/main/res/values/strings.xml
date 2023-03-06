@@ -24,4 +24,11 @@
     <string name="lemon">Keep tapping the lemon to squeeze it</string>
     <string name="glassOfLemonade">Tap the lemonade to drink it</string>
     <string name="emptyGlass">Tap the empty glass to start again</string>
+    
+    
+    <string name="bill_amount">Bill amount</string>
+    <string name="calculate_tip">Calculate tip</string>
+    <string name="tip_amount">Tip amount: %s</string>
+    <string name="how_was_the_service">Tip (%)</string>
+    <string name="round_up_tip">Round up tip?</string>
 </resources>
