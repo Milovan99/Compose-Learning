@@ -3,9 +3,11 @@ package com.milovanjakovljevic.compose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.Button
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -14,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -21,6 +24,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.milovanjakovljevic.compose.art_space.ArtSpaceApp
 import com.milovanjakovljevic.compose.composebasic.BusinessCard
 import com.milovanjakovljevic.compose.dice_roller.DiceRollerApp
 
@@ -50,14 +54,12 @@ class MainActivity : ComponentActivity() {
 
                 //DiceRollerApp()
                 //LemonadeApp()
-                TipTimeScreen()
+                //TipTimeScreen()
+                ArtSpaceApp()
                 }
             }
         }
     }
-
-
-
 
 
 

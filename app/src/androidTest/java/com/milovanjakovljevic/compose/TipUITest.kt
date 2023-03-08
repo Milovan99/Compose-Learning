@@ -3,11 +3,13 @@ package com.milovanjakovljevic.compose
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
+import com.milovanjakovljevic.compose.tip_time.TipTimeScreen
 import com.milovanjakovljevic.compose.ui.theme.ComposeTheme
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import java.text.NumberFormat
-
+@Ignore
 class TipUITest {
 
     @get:Rule

@@ -31,4 +31,17 @@
     <string name="tip_amount">Tip amount: %s</string>
     <string name="how_was_the_service">Tip (%)</string>
     <string name="round_up_tip">Round up tip?</string>
+
+
+    <string name="artwork_title1">Learning Android</string>
+    <string name="artwork_description1">DALE-E (2023)</string>
+
+    <string name="artwork_title2">Learning Flutter</string>
+    <string name="artwork_description2">DALE-E (2023)</string>
+
+    <string name="artwork_title3">Learning Compose</string>
+    <string name="artwork_description3">DALE-E (2023)</string>
+
+    <string name="artwork_title4">Learning Java</string>
+    <string name="artwork_description4">DALE-E (2023)</string>
 </resources>
